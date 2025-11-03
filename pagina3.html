@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2042286</title>
+  <link rel="stylesheet" href="styles3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+ 
+    <header>
+        <nav>
+            <a href="index.html"> Inicio </a>
+            <a href="pagina1.html"> Pagina 1 </a>
+            <a href="pagina2.html"> Pagina 2 </a>
+            <a href="pagina3.html"> Pagina 3 </a>
+        </nav>
+    </header>
+
+  <h3> Mi Top 3 de Mejores Albums de Musica </h3>
+
+  <div class="dropdown my-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      Selecciona
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#" onclick="mostrarIdea(1)"> Top 1 </a></li>
+      <li><a class="dropdown-item" href="#" onclick="mostrarIdea(2)"> Top 2 </a></li>
+      <li><a class="dropdown-item" href="#" onclick="mostrarIdea(3)"> Top 3 </a></li>
+    </ul>
+  </div>
+
+  <div id="alerta" class="alert alert-danger" role="alert">
+    Para ver los top, debe seleccionarlas en el Dropdown de arriba
+  </div>
+
+  <div id="contenido"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function mostrarIdea(num) {
+      const alerta = document.getElementById("alerta");
+      const contenido = document.getElementById("contenido");
+      alerta.style.display = "none"; 
+
+      let ideaHTML = "";
+
+      if (num === 1) {
+        ideaHTML = `
+        <div class="card">
+            <img src="imagenes/Top1.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><b> Top 1 - FEMME FATALE de Mon Laferte </b></h5>
+              <p class="card-text">
+                El álbum "Femme Fatale" de Mon Laferte es su noveno disco de estudio, lanzado en octubre de 2025, que fusiona pop alternativo y jazz en 14 canciones. 
+                Inspirado en la figura de la mujer misteriosa y poderosa, el álbum es oscuro, poético y explora la complejidad femenina con temas de intensidad, vulnerabilidad y la tensión entre el caos y la estabilidad. 
+                Incluye colaboraciones con artistas como Nathy Peluso, Conociendo Rusia, Tiago Iorc, Natalia Lafourcade y Silvana Estrada. 
+              </p>
+              <a href="https://open.spotify.com/intl-es/album/7q2GxttTFDWOihvnSWdwWw" target="_blank" class="btn btn-primary"> Escuchar en Spotify </a>
+            </div>
+        </div>
+        `;
+      }
+
+      else if (num === 2) {
+        ideaHTML = `
+          <div class="card">
+            <img src="imagenes/Top2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><b> Top 2 - ESENCIA de HUMBE </b></h5>
+              <p class="card-text">
+                Esencia es el cuarto álbum de estudio del cantautor mexicano Humbe, lanzado el 22 de marzo de 2023. 
+                Es un álbum conceptual que celebra el amor propio, la confianza y la voluntad, y es considerado por Humbe como su trabajo más personal. 
+                La producción del álbum tuvo lugar tanto en México como en Estados Unidos, con la colaboración de Humbe, Emiliano Rodríguez y Nicolás.  
+              </p>
+              <a href="https://open.spotify.com/intl-es/album/39dBODVnnDV4ZB1TtPeMTj" target="_blank" class="btn btn-primary"> Escuchar en Spotify </a>
+            </div>
+        </div>
+        `;
+      }
+
+      else if (num === 3) {
+        ideaHTML = `
+          <div class="card">
+            <img src="imagenes/Top3.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><b> Top 3 - La Vida Era Mas Corta de Milo J </b></h5>
+              <p class="card-text">
+                "La vida era más corta" es el título del álbum conceptual de Milo J lanzado en septiembre de 2025, que mezcla ritmos modernos como el trap 
+                con folclore latinoamericano y se enfoca en reflexiones sobre la vida, la muerte, el amor y la memoria colectiva. El proyecto es una compilación 
+                de 15 canciones producidas por él mismo junto a Tatool y Santiago Alvarado, con la participación de artistas de diferentes generaciones, como 
+                los Carabajal, Mercedes Sosa, Silvio Rodríguez y Trueno. 
+              </p>
+              <a href="https://open.spotify.com/intl-es/album/0sQR1p7NyAUqMPmWdZ6UBd" target="_blank" class="btn btn-primary"> Escuchar en Spotify </a>
+            </div>
+        </div>
+        `;
+      }
+
+      contenido.innerHTML = ideaHTML;
+    }
+  </script>
+
+</body>
+</html>
+

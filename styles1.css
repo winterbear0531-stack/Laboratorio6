@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9fb;
+  justify-content: center;
+  
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: left;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    }
+
+nav a:hover {
+    text-decoration: underline;
+    }
+
+
+.container { 
+  background-color: white;
+  padding: 30px 100px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin:0 auto;
+  max-width: 40rem;
+}
+
+h1 {
+  text-align: center;
+  color: #5418a7;
+  font-size: 48px;
+  margin-top: 30px;
+}
+
+.section h2 {
+  color: #555555;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.checklist {
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.presentation {
+  background-color: #ececec;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+button {
+  display: block;
+  margin: 25px auto 0 auto;
+  padding: 10px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
